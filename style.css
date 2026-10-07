@@ -41,3 +41,11 @@ button{
 button:hover{
     background-color: rgb(20, 110, 16);
 }
+
+table, th, td{
+    border: 1px solid;
+}
+
+table{
+    border-collapse: collapse;
+}
