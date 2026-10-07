@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+}
