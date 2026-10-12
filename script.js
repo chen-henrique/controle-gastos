@@ -4,6 +4,8 @@ const data = document.querySelector('#data')
 const tipo = document.querySelector('#tipo')
 const categoria = document.querySelector('#categoria')
 
+const transacoes = []
+
 const form = document.querySelector('#form');
 form.addEventListener('submit', function(event) {
     event.preventDefault()
@@ -15,6 +17,8 @@ form.addEventListener('submit', function(event) {
         categoria: categoria.value
     }
 
-    console.log(transacao);
+    transacoes.push(transacao)
+
+    console.log(transacoes);
 });
 
