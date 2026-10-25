@@ -20,12 +20,32 @@ form.addEventListener('submit', function(event) {
 
     transacoes.push(transacao)
 
-const tr = document.createElement('tr')
-const tdDescricao = document.createElement('td')
+    const tr = document.createElement('tr')
 
-tdDescricao.textContent = transacao.descricao
-tr.appendChild(tdDescricao)
-listaTransacoes.appendChild(tr)
+    const tdDescricao = document.createElement('td')
+    tdDescricao.textContent = transacao.descricao
+    tr.appendChild(tdDescricao)
+    listaTransacoes.appendChild(tr)
+
+    const tdValor = document.createElement('td')
+    tdValor.textContent = transacao.valor
+    tr.appendChild(tdValor)
+    listaTransacoes.appendChild(tr)
+
+    const tdData = document.createElement('td')
+    tdData.textContent = transacao.data
+    tr.appendChild(tdData)
+    listaTransacoes.appendChild(tr)
+
+    const tdTipo = document.createElement('td')
+    tdTipo.textContent = transacao.tipo
+    tr.appendChild(tdTipo)
+    listaTransacoes.appendChild(tr)
+
+    const tdCategoria = document.createElement('td')
+    tdCategoria.textContent = transacao.categoria
+    tr.appendChild(tdCategoria)
+    listaTransacoes.appendChild(tr)
 
     console.log(transacoes);
 });
