@@ -25,27 +25,29 @@ form.addEventListener('submit', function(event) {
     const tdDescricao = document.createElement('td')
     tdDescricao.textContent = transacao.descricao
     tr.appendChild(tdDescricao)
-    listaTransacoes.appendChild(tr)
+
 
     const tdValor = document.createElement('td')
-    tdValor.textContent = transacao.valor
+    tdValor.textContent = transacao.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
     tr.appendChild(tdValor)
-    listaTransacoes.appendChild(tr)
+
 
     const tdData = document.createElement('td')
     tdData.textContent = transacao.data
     tr.appendChild(tdData)
-    listaTransacoes.appendChild(tr)
+
 
     const tdTipo = document.createElement('td')
     tdTipo.textContent = transacao.tipo
     tr.appendChild(tdTipo)
-    listaTransacoes.appendChild(tr)
+
 
     const tdCategoria = document.createElement('td')
     tdCategoria.textContent = transacao.categoria
     tr.appendChild(tdCategoria)
+
     listaTransacoes.appendChild(tr)
+    form.reset()
 
     console.log(transacoes);
 });
